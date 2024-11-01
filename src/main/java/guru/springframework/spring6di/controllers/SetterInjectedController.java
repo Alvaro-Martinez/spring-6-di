@@ -7,10 +7,11 @@ import org.springframework.stereotype.Controller;
 @Controller
 public class SetterInjectedController {
 
-    @Autowired
     private GreetingService greetingService;
 
+    @Autowired
     public void setGreetingService(GreetingService greetingService) {
+        System.out.println("Called from the setGreetingService");
         this.greetingService = greetingService;
     }
 
